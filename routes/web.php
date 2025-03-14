@@ -29,6 +29,7 @@ use Illuminate\Support\Facades\Route;
 
 //login
 
+Route::get('users/{id}', [UserController::class, 'index'])->name('user.index');sadassdd
 
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login')->middleware('isLogin');
 Route::post('/login', [AuthController::class, 'login']);
